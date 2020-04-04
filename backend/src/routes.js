@@ -26,6 +26,7 @@ routes.post('/sessions', celebrate(createSessionValidation) ,SessionController.c
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', celebrate(createOngValidation), OngController.create);
+routes.delete('/ongs/:id', OngController.delete);
 
 routes.get('/profile', celebrate(profileValidation), ProfileController.index);
 routes.get('/profiledonate', celebrate(profileDonationValidation), ProfileDonationController.index);
